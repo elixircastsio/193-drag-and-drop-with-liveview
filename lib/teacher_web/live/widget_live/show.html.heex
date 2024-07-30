@@ -1,0 +1,10 @@
+<.back navigate={~p"/widgets"}>Back to widgets</.back>
+
+<.header>
+  <%= @widget.name %> - $<%= @price %>
+</.header>
+
+<.live_component
+  module={TeacherWeb.WidgetLive.OrderComponent}
+  id="place-order"
+  widget_id={@widget.id} />

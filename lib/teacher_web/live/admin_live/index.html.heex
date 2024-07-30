@@ -1,0 +1,22 @@
+<div class="font-bold text-xl mb-4">
+  <h2>Widget Inventory</h2>
+</div>
+
+<div class="flex space-x-4 w-full">
+  <div class="w-1/2">
+    <h3 class="font-medium mb-2">Not sellable</h3>
+    <ul id="not-sellable" class="py-1 list-none rounded bg-red-500">
+      <%= for widget <- @not_sellable_widgets do %>
+        <li class="bg-white p-2 m-2 rounded border border-slate-300"><%= widget.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="w-1/2">
+    <h3 class="font-medium mb-2">Sellable</h3>
+    <ul id="sellable" class="py-1 list-none rounded bg-green-500">
+      <%= for widget <- @sellable_widgets do %>
+        <li class="bg-white p-2 m-2 rounded border border-slate-300"><%= widget.name %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
